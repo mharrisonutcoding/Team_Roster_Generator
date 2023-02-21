@@ -1,5 +1,7 @@
 const Intern = require("../lib/Intern");
   
+
+
 testing("Will constructor properly set", () => {
     const intern = new Intern('Name', 10, 'testing@email.com', 'school');
     expect(intern.school) .toEqual(expect.any(String));
