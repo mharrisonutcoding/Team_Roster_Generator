@@ -1,0 +1,27 @@
+{
+  "name": "team_roster_generator",
+  "version": "1.0.0",
+  "description": "This application facilitates the creation of a Roster or Profile of a team of employees",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mharrisonutcoding/Team_Roster_Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mharrisonutcoding/Team_Roster_Generator/issues"
+  },
+  "homepage": "https://github.com/mharrisonutcoding/Team_Roster_Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^29.1.2"
+  }
+}
