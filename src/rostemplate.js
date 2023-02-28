@@ -58,7 +58,44 @@ const renderIntern = function (intern) {
     `;
 };
 
-const generateTeamRoster = function () {   
+generateHTML = (data) => {
+    rosterArray = [];
+  
+    for (let i = 0; i < data.length; i++) {
+      const employee = data[i];
+      const role = employee.getRole();
+  
+      // call manager function
+      if (role === "Manager") {
+        const managerCard = renderManager(employee);
+  
+        rosterArray.push(managerCard);
+      }
+  
+      // call engineer function
+      if (role === "Engineer") {
+        const engineerCard = renderEngineer(employee);
+  
+        rosterArray.push(engineerCard);
+      }
+  
+      // call intern function
+      if (role === "Intern") {
+        const internCard = renderIntern(employee);
+  
+        rosterArray.push(internCard);
+      }
+    }
+  
+    // joining strings
+    const employeeCards = rosterArray.join("");
+  
+    // return to generated page
+    const generateRoster = generateTeamRoster(employeeCards);
+    return generateRoster;
+  };
+
+const generateTeamRoster = function (employeeCards) {   
     return`
           <!DOCTYPE html>
           <html lang="en">
@@ -78,7 +115,7 @@ const generateTeamRoster = function () {
                       <div class="container">
                           <div class="row justify-content-center" id="team-cards">
                               <!--Team Roster Cards-->
-                              
+                              ${employeeCards}
                           </div>
                       </div>
                   </main>
