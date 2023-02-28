@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/mharrisonutcoding/Team_Roster_Generator#readme",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "inquirer": "^8.2.4"
   },
   "devDependencies": {
